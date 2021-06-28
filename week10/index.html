@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 10 | Methods 3</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 10</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/assignment-jason.png);">
+            <span style="background: white; float: right;">Jason</span>
+            <a href="https://thenewschool.carto.com/u/browj934/builder/05308abf-680a-4cee-8840-91ff600917db/embed" class="source">Carto map</a>
+        </div>
+
+        <div class="slide">
+            <h2>let's talk about project progress</h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's talk about project progress</h2>
+            <ul style="list-style: disc;">
+                <li>show what you have so far</li>
+                <li>talk about what's going well</li>
+                <li>talk about roadblocks</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>come back prepared to share one concrete piece of progress a group member made</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>so how does a web map work?</h2>
+        </div>
+
+        <div class="slide">
+            <p>(a few of these slides are adapted from these excellent <a href="http://maptime.github.io/anatomy-of-a-web-map/#45">Maptime slides</a>)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>most webmaps start with a basemap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>basemaps are tiled</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>tiles are 256 x 256 pixel images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>they use the same <em>zoom</em>, <em>x</em>, and <em>y</em> values, so they're interchangeable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a href="http://www.openwhatevermap.xyz/" class="source">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-2.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>as you zoom in, the number of tiles quadruples</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>if you made tiles for all of zoom 18 you'd have nearly 69 <em>billion</em> images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+            <h2>that's why browsers only load what you need to see</h2>
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+        </div>
+
+        <div class="slide">
+            <h2>each tile is just an image on the internet</h2>
+            <p>http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <p style="background: white;">http://a.tile.stamen.com/toner/0/0/0.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom1.png);">
+            <h2>these tiles use OpenStreetMap data</h2>
+            <h2>+ CartoCSS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>so how do you <em>make</em> base maps?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>it depends!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>in theory you can make tiles on your own</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <h2>but many mapmakers turn to Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <a href="https://www.mapbox.com/mapbox-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <a href="https://www.mapbox.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>not free, but free up to a point</h2>
+            <a href="https://www.mapbox.com/pricing/" class="source">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>creating styles in Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-go-to-studio.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-landing.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-select-base-style.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-new.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-layers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-layers.png);">
+            <h2>like most GISs, Mapbox maps are layer-based</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-components.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-components.png);">
+            <h2>layers are grouped into similar feature types, a layer group is called a component</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-edit.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-edit.png);">
+            <h2>you can change all of the layers in a component simultaneously</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-view-layers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-view-layers.png);">
+            <h2>or you can view the layers that make up that component</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-layers.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-layer-edit.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-layer-edit.png);">
+            <h2>layers have a lot more settings than components</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-layer-edit.png);">
+            <h2>by default, a layer in a component is locked</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-layer-edit.png);">
+            <h2>you can "override" individual settings and change them</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-new.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-new.png);">
+            <h2>not sure which component or layer a feature is on?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer.png);">
+            <h2>click it!</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer-edit.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer-edited.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer-edited.png);">
+            <h2>want to see exactly which features are in a layer?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer.png);">
+            <h2>first, go to the layer</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-select.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-select.png);">
+            <h2>click Select Data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-xray.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-xray.png);">
+            <h2>green features will appear on the map, pink are on the layer but filtered out</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-xray-click.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-xray-click.png);">
+            <h2>click a feature to see the data behind it</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-xray-filters.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-view-layer-xray-filters.png);">
+            <h2>some settings can't be changed without "ejecting" a layer from a component</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-component-eject.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-color.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-zoom-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-zoom-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-field.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-mapbox.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>for the most part, cartographic conventions hold with basemaps</h2>
+        </div>
+
+        <div class="slide">
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>scale</li>
+                <li>hierarchy</li>
+                <li>color</li>
+                <li>symbology</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>but with basemaps, be aware that <em>zooming</em> and <em>panning</em> change how it will be viewed</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/surging-seas.png);">
+            <a class="source" href="https://ss2.climatecentral.org/#12/40.6211/-73.9170?show=satellite&projections=0-K14_RCP85-SLR&level=9&unit=feet&pois=hide">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census-hard-to-count.png);">
+            <a class="source" href="http://www.censushardtocountmaps2020.us/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/land-grab-universities.png);">
+            <a class="source" href="https://www.landgrabu.org/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wapo-renters.png);">
+            <a class="source" href="https://www.washingtonpost.com/news/wonk/wp/2016/05/25/how-much-a-decent-apartment-costs-you-in-every-county/?noredirect=on&utm_term=.32ddb5129c24">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>using Mapbox tiles in Carto</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-publish.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-basemap.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-mapbox-basemap.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-mapbox-carto.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can add your own data to Mapbox basemaps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>for example, when you have too much data to put in Carto, and you don't want popups on the data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>I recommend adding data as a <em>tileset</em></h2>
+        </div>
+
+        <div class="slide">
+            <p>1. Upload data (such as a zipped shapefile)</p>
+            <p>2. Add the tileset to your style</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-tileset-link.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-upload-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-data-add.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-mapox-data.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>Urban Reviewer</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer-full.png);">
+            <a href="http://urbanreviewer.org" target="_blank">urban reviewer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/596.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/596-signs.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/596-rockaways.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-streetview.png);">
+            <h2>
+                <a href="https://www.google.com/maps/place/Edgemere+Urban+Renewal+Park/@40.595588,-73.776975,3a,75y,172.62h,90t/data=!3m4!1e1!3m2!1sZgWcG17VxRvOezZpdWXGkA!2e0!4m6!1m3!3m2!1s0x0:0xae6844ceae037acd!2sEdgemere+Urban+Renewal+Park!3m1!1s0x0:0xae6844ceae037acd!6m1!1e1" target="_blank">Edgemere Urban Renewal Park</a>
+            </h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-signs.jpg);">
+            <a class="source" href="http://596acres.org/en/lot/4158370033/" target="_blank">
+                596 Acres
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-signs-zoom.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park-signs-zoom.jpg);">
+            <h2>call Parks and say "where's our park?"</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/edgemere-urban-renewal-park.png);">
+            <h2>
+                <a href="https://www.google.com/maps/place/Edgemere+Urban+Renewal+Park/@40.595588,-73.776975,17z/data=!4m6!1m3!3m2!1s0x0:0xae6844ceae037acd!2sEdgemere+Urban+Renewal+Park!3m1!1s0x0:0xae6844ceae037acd" target="_blank">Edgemere Urban Renewal Park</a>
+            </h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/moses.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/fitzgerald-urban-renewal.jpg);">
+            <a class="source" href="https://muse.jhu.edu/book/11514">Fitzgerald</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-1968.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-satellite.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-curbed.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://kensinger.blogspot.com/">Nathan Kensinger</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/spura.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://www.nycedc.com/project/seward-park-mixed-use-development-project">NYC EDC</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/lincoln-center.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://performingartseducators.org/index.php/fourth-post/">Performing Arts Educators</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cadman-plaza.jpg);">
+            <h2>today</h2>
+            <a class="source" href="http://www.panoramio.com/photo/34791344">Panoramio</a>
+        </div>
+
+        <div class="slide">
+            <h2>let's map them!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we weren't the first to have this idea</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968.png);">
+            <h2>Community Development Program Progress Report (1968)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968-map-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdp1968-arverne-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984.png);">
+            <h2>Atlas of Urban Renewal (1984)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984-manhattan.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984-e14th.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/atlas1984-e14th-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/foil-letter.png);">
+            <h2>FOIL</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foil-paper.jpg);">
+            <h2>FOILed!</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/foil-letter-inspection.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bronx-park-south-plan.JPG);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bronx-park-south-plan-detail.JPG);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/plan-map.JPG);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arverne-google-drive.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/crown-heights-google-drive.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/crown-heights-google-drive.png);">
+            <h2>thanks, volunteers!</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urbanreviewer_final_excel.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bbl.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/disappointed.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/urbanreviewer_final_excel_arrow.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/urbanreviewer_final_excel_arrow2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tax-map.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/tax-map-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-shp.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer-full.png);">
+            <a href="http://urbanreviewer.org" target="_blank">urban reviewer</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/seward-park.png);">
+            <a href="http://www.urbanreviewer.org/#map=17/40.7154/-73.9864&plan=Seward+Park" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/seward-park-data.png);">
+            <a href="https://github.com/596acres/urbanreviewer/blob/gh-pages/data/geojson/us/ny/nyc/Manhattan/Seward%20Park.geojson" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/still-vacant1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/still-vacant2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/still-vacant3.png);">
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 11 | Methods 3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Methods 3, Lecture 11</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+        </div>
+
+        <div class="slide">
+            <h1>Methods 3</h1>
+        </div>
+
+        <div class="slide">
+          <h2>project milestones</h2>
+        </div>
+
+        <div class="slide">
+          <h2>let's talk in small groups</h2>
+        </div>
+
+        <div class="slide">
+            <h2>similar to last time,</h2>
+            <ul style="list-style: disc;">
+                <li>show what you have so far</li>
+                <li>talk about what's going well</li>
+                <li>talk about roadblocks</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+          <h2>plan on sharing some progress a groupmate has made and one of their next steps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+          <h2>temporal controller</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+          <h2>show features from a layer only at the time that they appear</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first, open the temporal controller panel</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-panel.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-panel-open.png);">
+        </div>
+
+        <div class="slide">
+            <h2>then, set a layer's temporal properties</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-properties.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-properties-tab.png);">
+        </div>
+
+        <div class="slide">
+            <h2>this can work with any kind of feature (points, lines, polygons)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>all you need is a field with the start date and time</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-time.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>more information about temporal controller</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-gif.png);">
+            <a href="https://www.gispo.fi/en/open-software/geogiffery-in-2020-with-qgis-temporal-controller/" class="source" target="_blank">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-menke.png);">
+            <a href="https://www.birdseyeviewgis.com/blog/2020/8/14/creating-a-covid-19-temporal-animation-with-qgis" class="source" target="_blank">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/silvia-animation.gif);">
+            <a class="source" href="https://silviaresendexavier.carto.com/viz/46eb6dc8-9d2c-11e5-8a42-0e5db1731f59/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/silvia-animation.gif);">
+            <h2>but Carto can only animate points</h2>
+            <a class="source" href="https://silviaresendexavier.carto.com/viz/46eb6dc8-9d2c-11e5-8a42-0e5db1731f59/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/silvia-animation.gif);">
+            <h2>it's possible to animate lines with some work</h2>
+            <a class="source" href="https://silviaresendexavier.carto.com/viz/46eb6dc8-9d2c-11e5-8a42-0e5db1731f59/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-lines.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-lines.png);">
+            <h2>start with a series of lines with dates</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-densify.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-densify.png);">
+            <h2>densify to add more nodes to the lines</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-densify.png); background-size: 75%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-nodes.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-nodes.png);">
+            <h2>turn the densified nodes into points</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-extract.png); background-size: 75%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-animation.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>3D in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-new-3d.png); background-size: 50%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/buildings-3d.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-3d.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/data-plotly.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/data-plotly-census.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-data-plotly.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-choropleth.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-choropleth.png);">
+            <h2>what if I wanted to put this online without using Carto?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+            <h2>qgis2web</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+            <h2>qgis2web</h2>
+            <h2>creates a webmap out of a QGIS map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-exported.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-output.png);">
+            <h2>it outputs a folder of code that creates the webmap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+            <h2>you can upload these files (drag-and-drop) to a site like neocities</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+            <h2>you can upload these files (drag-and-drop) to a site like neocities</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities-live.png);">
+            <a class="source" href="https://ebrelsford.neocities.org/#11/40.6826/-73.8374">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/streetview.png);">
+            <a class="source" href="https://thenewschool.carto.com/u/brelsfoeagain/builder/67f0b566-0192-4abc-aaa3-42d80c71260c/embed">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/streetview.png);">
+            <h2>you'll need:</h2>
+            <h2>latitude and longitude for each feature</h2>
+            <a class="source" href="https://thenewschool.carto.com/u/brelsfoeagain/builder/67f0b566-0192-4abc-aaa3-42d80c71260c/embed">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-api-key.png);">
+            <a class="source" href="https://developers.google.com/maps/documentation/javascript/get-api-key">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-api-key.png);">
+            <h2>you'll also need:</h2>
+            <h2>an API key from google (requires a credit card)</h2>
+            <a class="source" href="https://developers.google.com/maps/documentation/javascript/get-api-key">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-streetview-popup.png);">
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 48px; line-height: 58px;"><code>&lt;img style="width: 90%"
+  src="https://maps.googleapis.com/maps/api/
+  streetview?size=640x480&amp;key=[YOUR API KEY]
+  &amp;location={{latitude}},{{longitude}}&amp;fov=60
+  &amp;pitch=5" /&gt;
+            </code></pre>
+        </div>
+
+    </body>
+</html>
