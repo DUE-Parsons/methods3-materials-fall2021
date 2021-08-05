@@ -1,7 +1,7 @@
 <html>
     <head>
-        <title>Assignment 7 | Methods 3</title>
-        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <title>Assignment 8 | Methods 3</title>
+        <link href='http://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
         <link href="../css/pages.css" rel="stylesheet" type="text/css" />
         <link href="../css/inclass.css" rel="stylesheet" />
     </head>
@@ -9,15 +9,36 @@
         <main>
             <header>
                 <a href="..">&larr; Methods 3</a>
-                <h1>Assignment 7</h1>
+                <h1>Assignment 8</h1>
             </header>
 
             <section>
-                <h2>Make a map using Carto</h2>
-                <p>This week we talked about using <a href="https://carto.com/">Carto</a> to make online maps.</p>
-                <p>Create a map in Carto using at least two layers of data. This could be a map from a previous assignment that you made in QGIS that you would like to try to put online. Or it could be a new map using data sources that are relevant to your project or other research.</p>
-                <p>I'm looking to see that you are able to upload data to Carto, style it, and publish the map. If you have time I would like to see you try using widgets and popups.</p>
-                <p>Share the map publicly and submit the link to your map. As usual, please include a short description of what you did, any issues you might have come upon, how you might have done things differently given the time/techniques to do so.</p>
+                <h2>Resources</h2>
+                <ul>
+                    <li>The <a id="" class="" title="" href="http://ebrelsford.github.io/talks/2015/Methods3/week7/materials/cartocss-reference.pdf" target="">CartoCSS reference sheet</a></li>
+                    <li>The <a id="" class="" title="" href="http://ebrelsford.github.io/talks/2015/Methods3/week7/materials/advanced-cartocss-reference.pdf" target="">advanced CartoCSS reference sheet</a></li>
+                    <li>The <a href="https://carto.com/docs/carto-engine/cartocss/">Carto documentation on CartoCSS</a>, even though they use the old editor in screenshots</li>
+                    <li>Finally, here's a video, <strong>CartoCSS &amp; CartoDB</strong>. It uses the old editor interface, but it still covers the CartoCSS code well:</li>
+                </ul>
+                <p><iframe src="https://www.youtube.com/embed/7_opI97diZQ?list=UUsmBq4ziqRgBZSJK8sGF0Fg" width="640" height="360" data-mce-fragment="1"></iframe></p>
+            </section>
+
+            <section>
+                <h2>Part 1: Carto &amp; CartoCSS</h2>
+                <p>Create a map in Carto. The map can be on any topic and use any data you choose, including data for your final project. Then do the following:</p>
+                <ol>
+                    <li>Add at least one <strong>zoom-dependent</strong> styling rule. That is, your features' styles should change somehow according to the map's zoom level.</li>
+                    <li>Add at least one <strong>attribute-dependent</strong> styling rule. That is, some features should be styled differently according to the value of one or more of their attributes.</li>
+                    <li>Experiment with a CartoCSS <strong>property</strong> that your styles are not currently using. You can find all of the properties in the <a href="https://carto.com/developers/styling/cartocss/">CartoCSS documentation</a>. Mostly points will use properties that start with <em>marker-</em>, polygons will use properties that start with <em>polygon-</em>.</li>
+                    <li>Consider how the map will look when shared online. Give thought to the <strong>title</strong>, <strong>description</strong>, and <strong>pop-ups</strong> you use. Modify your pop-up's labels as applicable to make them more readable.</li>
+                </ol>
+                <p>While the aim of the assignment is to see you working with CartoCSS code, you should also intend to make changes to your styles that make your map more legible or interesting.</p>
+                <p>Submit a <strong>link</strong> to the map, and the final <strong>CartoCSS</strong> (copy and paste into a document and create a PDF), and briefly explain what you did with your styles.<br /></p>
+            </section>
+
+            <section>
+                <h2><span>Submitting your work</span></h2>
+                <p><span>Please submit the <strong>link</strong>, <strong>code</strong>, and<strong> explanation </strong>from Part 1.<br /></span></p>
             </section>
 
             <footer>

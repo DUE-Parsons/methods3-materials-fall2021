@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Class 9 | Methods 3</title>
+        <title>Class 11 | Methods 3</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
         <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans' rel='stylesheet' type='text/css'>
-        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
         <link href="../css/pig.css" rel="stylesheet" type="text/css" />
         <link href="../css/base.css" rel="stylesheet" />
 
-        <script src="../js/hammer.min.js"></script>
         <script src="../js/pig.js"></script>
     </head>
     <body>
 
         <div class="slide">
-            <p>Welcome to Methods 3, Lecture 9</p>
+            <p>Welcome to Methods 3, Lecture 11</p>
             <p>This is a web page that can be viewed as slides.</p>
             <p>→ to move forward</p>
             <p>← to go back</p>
@@ -27,612 +25,223 @@
             <h1>Methods 3</h1>
         </div>
 
-        <div class="slide" style="background-image: url(img/assignment-jason.png);">
-            <span style="background: white; float: right;">Jason</span>
-            <a class="source" href="https://thenewschool.carto.com/u/browj934/builder/31490e75-59e1-4ad2-affe-069b2c5f72a5/embed">source</a>
+        <div class="slide">
+          <h2>project milestones</h2>
         </div>
 
         <div class="slide">
-            <pre class="prettyprint" style="font-size: 40px; line-height: 42px;"><code>#layer::labels[zoom &gt; 14] {
-  text-name: [school];
-  text-face-name: 'DejaVu Sans Book';
-  text-size: 18;
-  text-fill: rgba(8, 8, 65, 0.51);
-  text-label-position-tolerance: 0;
-  text-halo-radius: 0;
-  text-halo-fill: #6f808d;
-  text-dy: 0;
-  text-allow-overlap: false;
-  text-placement: point;
-  text-placement-type: dummy;
-  text-opacity: 0;
-}</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/assignment-ashley.png);">
-            <span style="background: white; float: right;">Ashley</span>
-            <a class="source" href="https://thenewschool.carto.com/u/lehra715/builder/40367b24-a3ee-4591-8838-26c5a7ba3c16/embed">source</a>
+          <h2>let's talk in small groups</h2>
         </div>
 
         <div class="slide">
-            <pre class="prettyprint" style="font-size: 40px; line-height: 42px;"><code>...
+            <h2>similar to last time,</h2>
+            <ul style="list-style: disc;">
+                <li>show what you have so far</li>
+                <li>talk about what's going well</li>
+                <li>talk about roadblocks</li>
+            </ul>
+        </div>
 
-#layer-name[square_footage &lt; 50] {
-  marker-width: 8;
-  marker-fill: #fcb200;
-}
+        <div class="slide">
+          <h2>plan on sharing some progress a groupmate has made and one of their next steps</h2>
+        </div>
 
-#layer-name[square_footage &gt;= 50] {
-  marker-width: [square_footage]*.01;
-  marker-fill: #cc66cb; 
-}
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+        </div>
 
-#layer-name[square_footage &gt;= 6000] {
-  marker-fill: #66C5CC; 
-}
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+          <h2>temporal controller</h2>
+        </div>
 
-#layer-name[square_footage &gt;= 15000] {
-  marker-width: [square_footage]*.0001; 
-}</code></pre>
+        <div class="slide" style="background-image: url(img/temporal-controller-animation.gif);">
+          <h2>show features from a layer only at the time that they appear</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first, open the temporal controller panel</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-panel.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-panel-open.png);">
+        </div>
+
+        <div class="slide">
+            <h2>then, set a layer's temporal properties</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-properties.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-properties-tab.png);">
+        </div>
+
+        <div class="slide">
+            <h2>this can work with any kind of feature (points, lines, polygons)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>all you need is a field with the start date and time</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-time.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>more information about temporal controller</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-gif.png);">
+            <a href="https://www.gispo.fi/en/open-software/geogiffery-in-2020-with-qgis-temporal-controller/" class="source" target="_blank">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/temporal-controller-menke.png);">
+            <a href="https://www.birdseyeviewgis.com/blog/2020/8/14/creating-a-covid-19-temporal-animation-with-qgis" class="source" target="_blank">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/silvia-animation.gif);">
+            <a class="source" href="https://silviaresendexavier.carto.com/viz/46eb6dc8-9d2c-11e5-8a42-0e5db1731f59/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/silvia-animation.gif);">
+            <h2>but Carto can only animate points</h2>
+            <a class="source" href="https://silviaresendexavier.carto.com/viz/46eb6dc8-9d2c-11e5-8a42-0e5db1731f59/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/silvia-animation.gif);">
+            <h2>it's possible to animate lines with some work</h2>
+            <a class="source" href="https://silviaresendexavier.carto.com/viz/46eb6dc8-9d2c-11e5-8a42-0e5db1731f59/public_map">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-lines.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-lines.png);">
+            <h2>start with a series of lines with dates</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-densify.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-densify.png);">
+            <h2>densify to add more nodes to the lines</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-densify.png); background-size: 75%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-nodes.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/animate-nodes.png);">
+            <h2>turn the densified nodes into points</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-extract.png); background-size: 75%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-animation.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>3D in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-new-3d.png); background-size: 50%;">
+        </div>
+
+        <div class="slide" style="background-image: url(img/buildings-3d.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-3d.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/data-plotly.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/data-plotly-census.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-data-plotly.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-choropleth.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-choropleth.png);">
+            <h2>what if I wanted to put this online without using Carto?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+            <h2>qgis2web</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web.png);">
+            <h2>qgis2web</h2>
+            <h2>creates a webmap out of a QGIS map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-exported.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis2web-output.png);">
+            <h2>it outputs a folder of code that creates the webmap</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+            <h2>you can upload these files (drag-and-drop) to a site like neocities</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+            <h2>you can upload these files (drag-and-drop) to a site like neocities</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities-live.png);">
+            <a class="source" href="https://ebrelsford.neocities.org/#11/40.6826/-73.8374">source</a>
         </div>
 
         <div class="slide intermission"></div>
 
-        <div class="slide">
-            <pre class="prettyprint"><code>#layer {
-    marker-fill: #ff307a;
-    marker-line-color: #FFF;
-    marker-line-width: 0.25;
-    marker-line-opacity: 0.4;
-    marker-width: 2;
-    marker-allow-overlap: true;
-}</code></pre>
+        <div class="slide" style="background-image: url(img/streetview.png);">
+            <a class="source" href="https://thenewschool.carto.com/u/brelsfoeagain/builder/67f0b566-0192-4abc-aaa3-42d80c71260c/embed">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/streetview.png);">
+            <h2>you'll need:</h2>
+            <h2>latitude and longitude for each feature</h2>
+            <a class="source" href="https://thenewschool.carto.com/u/brelsfoeagain/builder/67f0b566-0192-4abc-aaa3-42d80c71260c/embed">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-api-key.png);">
+            <a class="source" href="https://developers.google.com/maps/documentation/javascript/get-api-key">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-api-key.png);">
+            <h2>you'll also need:</h2>
+            <h2>an API key from google (requires a credit card)</h2>
+            <a class="source" href="https://developers.google.com/maps/documentation/javascript/get-api-key">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-streetview-popup.png);">
         </div>
 
         <div class="slide">
-            <pre class="prettyprint"><code>#layer {
-    marker-width: 3;
-    ...
-    [zoom &gt;= 10] {
-        marker-width: 8;
-    }
-    [zoom &gt;= 16] {
-        marker-width: 15;
-    }
-}</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>milestones are due November 8th</h2>
-        </div>
-
-        <div class="slide">
-            <h2>next week we'll set aside some time to talk about where you're at</h2>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>more ways to get data</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/geoseer-0.png);">
-            <a class="source" href="https://www.geoseer.net/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/geoseer-1.png);">
-            <a class="source" href="https://www.geoseer.net/s.php?q=immigration+australia">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/geoseer-1.png);">
-            <h2>look for WFS (web feature service) URLs</h2>
-            <a class="source" href="https://www.geoseer.net/s.php?q=immigration+australia">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/geoseer-2.png);">
-            <a class="source" href="https://www.geoseer.net/rl.php?ql=c1d8f230601b3f44&p=1&q=immigration%20australia#">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/wfs-new.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/wfs-new-1.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/wfs-new-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/wfs-new-3.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/feature-server-0.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/feature-server-0.png);">
-          <h2>you could also look for Esri FeatureServer URLs</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/feature-server-1.png);">
-            <a class="source" href="https://egis.fire.ca.gov/arcgis/rest/services/FRAP/FirePerimeters_FS/FeatureServer/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/feature-server-qgis.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/feature-server-2.png);">
-        </div>
-
-        <div class="slide">
-            <h2>try it out: search for a WFS or FeatureServer URL you could use</h2>
-        </div>
-
-        <div class="slide">
-            <h2>Getting data from OpenStreetMap</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm.png);">
-            <a class="source" href="https://www.openstreetmap.org/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm.png);">
-            <h2>a free map of the world</h2>
-            <a class="source" href="https://www.openstreetmap.org/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm.png);">
-            <h2>kinda like a giant shapefile of the world</h2>
-            <a class="source" href="https://www.openstreetmap.org/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/nextzen-extracts.png);">
-            <a class="source" href="https://www.nextzen.org/metro-extracts/index.html">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/nextzen-extracts.png);">
-            <h2>if you need a whole city</h2>
-            <a class="source" href="https://www.nextzen.org/metro-extracts/index.html">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/qgis-quickosm-0.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/qgis-quickosm-0.png);">
-            <h2>if you only need a certain feature type</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/qgis-quickosm-1.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/qgis-quickosm-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/qgis-quickosm-1.png);">
-            <h2>not sure what to search for?</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm.png);">
-            <h2>go to <a href="https://openstreetmap.org">openstreetmap.org</a></h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm.png);">
-            <h2>find something you would like to get data for</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm-query-0.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm-query-0.png);">
-            <h2>right-click on it</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm-query-1.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm-query-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm-query-3.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/osm-query-3.png);">
-            <h2>use the tags you find</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/google-bus-pinata.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/google-bus-pinata.png);">
-            <h2>collecting your own data</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/google-bus-pinata.png);">
-            <a href="http://allthingsd.com/20130506/demonstrators-smash-google-bus-pinata-in-san-francisco/">
-                Demonstrators Smash Google Bus Piñata in San Francisco
-            </a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-final-overall.gif);">
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-final-zoom.gif);">
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/google-bus-foursquare.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-fieldpapers.png);">
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-fieldpapers2.png);">
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-fieldpapers2.png);">
-            <p style="background: rgba(255, 255, 255, 0.8);">"We enlisted people to go to stops, measure traffic and count people getting off and on and we hired bike messengers to see where the buses went..."</p>
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-fieldpapers3.png);">
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-fieldpapers3.png);">
-            <p style="background: rgba(255, 255, 255, 0.8);">"... The cyclists used Field Papers to transcribe the various routes and what they found out, which we recompiled back into a database of trips, stops, companies and frequency."</p>
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/stamen-bus-final-zoom.gif);">
-            <a class="source" href="https://hi.stamen.com/the-city-from-the-valley-57e835ee3dc6#.rfczry71y">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-make-atlas.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-print-atlas.png);">
-            <a class="source" href="http://fieldpapers.org/atlas.php?id=fhnp4qks#18/40.73649/-73.99715">
-                source
-            </a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-page.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/walkingpapers-osm.jpg);">
-            <a class="source" href="http://wiki.openstreetmap.org/wiki/Walking_Papers">
-                source
-            </a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-uploaded.png);">
-            <a class="source" href="http://fieldpapers.org/atlas.php?id=ncz5lrfs#17/40.67782/-73.96397">
-                source
-            </a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fieldpapers-uploaded.png);">
-            <ol style="background: rgba(255, 255, 255, 0.8); padding: 25px;">
-                <li>download GeoTIFF</li>
-                <li>open in QGIS</li>
-                <li>create new shapefile and trace</li>
-            </ol>
-        </div>
-
-        <div class="slide">
-            <h2>want to collect data directly on a phone?</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fulcrum.png);">
-            <a class="source" href="https://www.fulcrumapp.com/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/fulcrum.png);">
-            <h2>costs $$ but can likely get a student deal</h2>
-            <a class="source" href="https://www.fulcrumapp.com/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/maps-me.png);">
-            <h2>maps.me</h2>
-            <a class="source" href="https://blog.cartong.org/2017/03/14/gis-data-collection/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/maps-me-tutorial.png);">
-            <a class="source" href="https://gfc.ucdavis.edu/guides/mapsme.html">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/qfield.png);">
-            <a class="source" href="https://qfield.org/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/qfield.png);">
-            <h2>basically QGIS on an android device</h2>
-            <a class="source" href="https://qfield.org/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/qfield.png);">
-            <h2>you can load a QGIS project and create/edit data in it</h2>
-            <a class="source" href="https://qfield.org/">source</a>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>using SVG icons with Carto</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/nounproject.png);">
-            <a class="source" href="https://nounproject.com">nounproject.com</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/nounproject.png);">
-            <h2>find or make an SVG</h2>
-            <a class="source" href="https://nounproject.com">nounproject.com</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-0.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-1.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-3.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-cartocss.png);">
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>customizing legends and popups</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html-example.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html-example.png);">
-          <h2>for example, to add data sources to legends</h2>
-        </div>
-
-        <div class="slide">
-            <h2>or to customize popup text and layout</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
-            <h2>like last time, we'll need a little code to do this</h2>
-        </div>
-
-        <div class="slide">
-            <h2>HTML</h2>
-        </div>
-
-        <div class="slide">
-            <h2>HTML gives <em>content</em> and <em>structure</em> to web pages</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;some text on a web page&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-            <p>
-                the paragraph <strong>opening tag</strong>
-            </p>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-            <p>
-                the paragraph <strong>opening tag</strong>
-            </p>
-            <p>
-                opening tags always start with
-            </p>
-            <pre class="prettyprint"><code>&lt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-            <p>
-                the paragraph <strong>opening tag</strong>
-            </p>
-            <p>
-                opening tags always start with
-            </p>
-            <pre class="prettyprint"><code>&lt;</code></pre>
-            <p>and end with</p>
-            <pre class="prettyprint"><code>&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;/p&gt;</code></pre>
-            <p>the paragraph <strong>closing tag</strong></p>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;/p&gt;</code></pre>
-            <p>the paragraph <strong>closing tag</strong></p>
-            <p>closing tags always start with</p>
-            <pre class="prettyprint"><code>&lt;/</code></pre>
-            <p>and end with</p>
-            <pre class="prettyprint"><code>&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;some text on a web page&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>HTML in Carto</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
-        </div>
-
-        <div class="slide">
-            <h2>you can add HTML before and after Carto legends</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-        </div>
-
-        <div class="slide">
-            <h2>in popups, <code>{{}}</code> around a field name will be replaced by the value of that field for the feature you clicked</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-            <div style="background-color: rgba(255, 255, 255, 0.8);"><code>{{neighbourhood}}, {{neighbourhood_group}}</code></div>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-            <div style="background-color: rgba(255, 255, 255, 0.8);">
-                <code>{{neighbourhood}}, {{neighbourhood_group}}</code>
-                <p>becomes</p>
-                <p>SoHo, Manhattan</p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>you can use this to add links within Carto maps</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>and in popups those links can change based on the clicked feature</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="{{url}}"&gt;learn more&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="{{url}}"&gt;learn more&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            <h2>(if there is a field called <code>url</code>)<h2>
-        </div>
-
-        <div class="slide">
-            <h2><a href="inclass-html.html" target="_blank">in-class exercise</a></h2>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>CSS</h2>
-        </div>
-
-        <div class="slide">
-            <h2>CSS</h2>
-            <p>makes webpages look nice</p>
-        </div>
-
-        <div class="slide">
-            <h2>CSS</h2>
-            <p>deceptively similar to CartoCSS, but not CartoCSS</p>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    some text on a web page
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p style="font-size: 20px;"&gt;
-    some text on a web page
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/css-properties.png);">
-            <a class="source" href="http://www.htmldog.com/references/css/properties/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/css-properties.png);">
-            <h2>similar to CartoCSS but just for webpages</h2>
-            <a class="source" href="http://www.htmldog.com/references/css/properties/">source</a>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;div class="CDB-infowindow"&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;div class="CDB-infowindow" style="color: green;"&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>add <em>style=""</em> in an opening tag</h2>
-        </div>
-
-        <div class="slide">
-            <h2><a href="inclass-css.html" target="_blank">in-class exercise</a></h2>
-        </div>
-
-        <div class="slide">
-            <h2>you can add images with HTML</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;img src="http://i.ytimg.com/cat.jpg" /&gt;</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-image.png);">
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>if you want to learn a more about HTML and CSS, there are many free resources</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/codecademy.png);">
-            <a class="source" href="https://www.codecademy.com/learn/learn-html">codecademy</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/shayhowe.png);">
-            <a class="source" href="http://learn.shayhowe.com/html-css">learn.shayhowe.com/html-css</a>
-        </div>
-
-        <div class="slide">
-            <h2>if you take Advanced GIS we'll get into much more depth</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/adv-gis.png);">
-            <a class="source" href="https://courses.newschool.edu/courses/NINT5423/">Advanced GIS</a>
+            <pre style="font-size: 48px; line-height: 58px;"><code>&lt;img style="width: 90%"
+  src="https://maps.googleapis.com/maps/api/
+  streetview?size=640x480&amp;key=[YOUR API KEY]
+  &amp;location={{latitude}},{{longitude}}&amp;fov=60
+  &amp;pitch=5" /&gt;
+            </code></pre>
         </div>
 
     </body>
