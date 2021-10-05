@@ -15,17 +15,21 @@
             <section>
                 <h2>Georeferencing</h2>
                 <ol>
-                    <li>Add QuickMapServices plug-in.</li>
+                    <li>We will do this exercise together.</li>
+                    <li>Download <a href="data/week6_folder.zip">today's folder and save it your methods3 folder.</a>.</li>
                     <li>Go to <a href="http://www.urbanreviewer.org/">Urban Reviewer</a>.</li>
                     <li>Find the urban renewal plan for <a href="http://www.urbanreviewer.org/#map=16/40.7031/-73.9717&plan=Brooklyn+Navy+Yard">Brooklyn Navy Yards</a>.</li>
-                    <li>Click on the image to make it larger, then right click on it and <strong>save as</strong> to save it to your computer.</li>
+                    <li>Click on the image to make it larger, then right click on it and <strong>save as</strong> to save it to the week6/img/raw folder on your computer.</li>
                     <li>Open QGIS.</li>
+                    <li>Add QuickMapServices plug-in.</li>
                     <li>Set the project's projection (CRS) to <strong>EPSG:3857</strong>. We do this because the base layer in the next step is in that projection.</li>
+                    <li>Save the map to week6/maps/bbk_navy_yard.qgz</li>
                     <li>Using QuickMapServices, add a satellite base layer with labels. I would suggest the Google Hybrid layer.</li>
-                    <li>Zoom to the general area your image should be in.</li>
+                    <li>Zoom to the Brooklyn Navy Yards should be in.</li>
                     <li>Enable <strong>Georeferencer GDAL</strong> in the plugins area of QGIS.</li>
                     <li>Go to <strong>Raster &gt; Georeferencer &gt; Georeferencer</strong> to open the Georeferencer window.</li>
                     <li>Go to <strong>File &gt; Open Raster</strong> and select the image you downloaded from Urban Reviewer.</li>
+                    <li>Wait here and I'll walk you through the next step.</li>
                     <li>Add 3 or 4 ground control points:
                         <ol>
                             <li>Switch between the Georeferencer and map windows and find a common point between the two (generally a street corner will be best).</li>
@@ -38,7 +42,7 @@
                     <li>Once you are happy with the ground control points, click the <strong>Settings</strong> icon in the Georeferencer window.</li>
                     <li>Set <strong>Transformation type</strong> to <strong>Thin plate spline</strong>.</li>
                     <li>Set <strong>Target SRS</strong> to <strong>3857</strong> (the projection the reference map is in).</li>
-                    <li>Select a location to save to.</li>
+                    <li>Save the georeferenced image to week6/img/processed/brooklyn_navy_yards_rectified.tiff.</li>
                     <li>Check <strong>Load in QGIS when done</strong>.</li>
                     <li>Click <strong>Start Georeferencing</strong> in the Georeferencer window (looks like a play button).</li>
                     <li>The Georeferenced image should show up on your map.</li>

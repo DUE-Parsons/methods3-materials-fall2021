@@ -15,9 +15,15 @@
             <section>
                 <h2>Spatial Joins</h2>
                 <ol>
+                    <li>We will use a spatial join to count the number of schools, and the number of elementary schools in each school district in New York.</li>
                     <li>Open the <strong>School Districts</strong> shapefile in QGIS.</li>
                     <li>Open the <strong>Public School Points</strong> shapefile.</li>
-                    <li>Use <strong>Join Attributes by Location (Summary)</strong> from the search bar to find the total (sum) <strong>schools</strong> by school district.</li>
+                    <li>The schools shapefile has an indicator, <strong>elem_num</strong> that is 1 if it is an elementary school, and zero otherwise. We'll use this indicator to add up the number of elementary schools.</li>
+                    <li>Select <strong>Join Attributes by Location (Summary)</strong> from the search bar.</li>
+                    <li>Input layer = school districts</li>
+                    <li>Join layer = Public schools points</li>
+                    <li>Fields to summarise, select <strong>elem_num</strong></li>
+                    <li>Summaries to calculate, select <strong>count</strong> and <strong>sum</strong> to calculate the number of schools and the number of elementary schools</li>
                     <li>Make a choropleth with the result.</li>
                 </ol>
             </section>
