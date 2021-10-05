@@ -13,14 +13,17 @@
             </header>
 
             <section>
-                <h2>Join census data</h2>
+                <h2>Join census data to calculate covid rates</h2>
                 <ol>
-                    <li>In QGIS, open the CSV of census data (<strong>nys-owner-renter/nys-owner-renter.csv</strong>). Use <strong>Layer &gt; Add Layer &gt; Add Delimited Text Layer</strong> with <strong>No geometry</strong> selected.</li>
-                    <li>Open the shapefile in <strong>nys_census_tracts</strong> QGIS.</li>
-                    <li>Join the spreadsheet to the shapefile. You should be able to use <strong>GEO_ID</strong> and <strong>AFFGEOID</strong>.</li>
-                    <li>Make a choropleth showing the percentage of housing units that are vacant.</li>
-                    <li>Try making another choropleth.</li>
-                    <li>What if we only wanted to see this map for NYC? Save the joined layer as a new shapefile, then clip that layer to the <strong>Borough Boundaries</strong> shapefile. Alternatively, you could use select by location to find all tracts that overlap with the borough boundaries. Style this layer with a graduated style.</li>
+                    <li>Go the the census <a href="https://data.census.gov/cedsci/">website</a> and search for population data.</li>
+                    <li>Select the first entry - Race</li>
+                    <li>Select Customize Table, then Download</li>
+                    <li>Open the data in Excel or similar and explore the data, remove one of the header columns, and identify the population field.</li>
+                    <li>In QGIS, reopen the covid map project from the last in-class exercise.</li>
+                    <li>Join the census spreadsheet to the state shapefile with covid data already joined.</li>
+                    <li>Calculate a new field of covid cases or deaths per 100,000 people.</li>
+                    <li>Make a choropleth showing your new covid statistic.</li>
+                    <li>Export your state dataset to the week6/output folder.</li>
                 </ol>
             </section>
 
