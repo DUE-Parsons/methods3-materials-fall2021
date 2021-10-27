@@ -9,26 +9,71 @@
         <main>
             <header>
                 <a href="..">&larr; Methods 3</a>
-                <h1>In-class Exercises</h1>
+                <h1>In-class and Assignment</h1>
             </header>
 
             <section>
-                <h2>Download and process data from NHGIS and explore with Plotly</h2>
-                <ol>
+                <h3>Join census data from NHGIS to affordability data, explore with Plotly, and map</h3>
+                <p>These are the updated intructions for downloading the appropriate data from NHGIS so that you can join it to the census shapefile. All of the data for this exercise, including the 2015-19 ACS data from NHGIS can be downloaded <a href="">here</a>.  If you want to download and process the data yourself, follow instructions below. Otherwise, proceed to Step 1.</p>
+                <ul>
                     <li>Go to <a href="https://data2.nhgis.org/">nhgis</a> and download race/ethnicity data for every census tract in the country using NHGIS.</li>
-                    <li>Select Geographic Levels = census tract, Years = 2020, Data = P2. Hispanic or Latino, and Not Hispanic or Latino by Race.</li>
+                    <li>Select Geographic Levels = census tract, Years = 2015-19, Topics = Race AND Hispanic Origin </li>
+                    <li>From the listr of data tables, select B03002. Hispanic or Latino Origin by Race.</li>
                     <li>Sign up for a free account with NHGIS and download the data.</li>
                     <li>Open the codebook and the data.</li>
-                    <li>Save a version of the data as a csv in your processed folder and select the id variables you need to join to your shapefile and all of the Population of one race alone variables and create the following new variables:</li>
+                    <li>Save a version of the data as a csv in your processed folder and select all variables up to ALUKE012. We will use the Population of one race alone variables to create the following new variables once it is joined to the ga_afford_ratio shapefile:</li>
                     <ul>
                         <li> Percent White alone, Not Hispanic</li>
                         <li> Percent Hispanic or Latino</li>
                         <li> Percent Black or African Alone, Not Hispanic</li>
                         <li> Percent Asian Alone, Not Hispanic</li>
                     </ul>
-                    <li>Add csv to QGIS and join to your statewide affordability shapefile.</li>
-                    <li>Create a new plotly scatterplot to compare affordability to your race/ethnicity variables.</li>
-                    <li>For your homework assignment, you will continue to work with this data.</li>
+                </ul>
+                <ol>
+                    <li>In the housing_access_georgia QGIS map document, add tracts_race_201519.csv to QGIS so that we can join it to the Georgia census tracts</li>
+                    <li>In class we struggled to join the csv to the shapefile.  I was able to figure out the issue by looking closely at the GEOID fields in both files.  <strong>Here's the reason:</strong>  In both files the unique census tract id is composed State ID, County ID, Tract ID.  In the shapefile, the County ID is called COUNTYFP and it is 3 digits with a 0 at the beginning if the COUNTYFP is only 2 digits long. In the csv, the County ID does not have a 0 at the beginning if it is 2 digits long. So the GEOID and AFFGEOID don't match in counties where the COUNTYFP is two-digits, and the join only worked for some of the census tracts.<br> To fix it we need to create a common Tract ID in each of the files.</li>
+                    <ul>
+                        <li>In tracts_race_201519: </li>
+                        <li>Open the Attribute Table and create a new field -- name it "join"</li>
+                        <li>Output field type = "Text (string))"</li>
+                        <li>Expression = concat( "STATEA" , "COUNTYA" , "TRACTA" )</li>
+                        <li>This combines the 3 fields into one with no spaces in between.</li>
+                        <img src="img/csv_join.png">
+                        <li>In Afford Ratio (the shapefile of all census tracts in Georgia): </li>
+                        <li>Open the Attribute Table and create a new field -- name it "join"</li>
+                        <li>Output field type = "Text (string))"</li>
+                        <li>Output field length = 12</li>
+                        <li>Expression = concat( to_int("STATEFP") , to_int("COUNTYFP") , to_int("TRACTCE") )</li>
+                        <li>This converts each of the fields into numbers, which removes any leading zero, and combines the 3 fields into one with no spaces in between.</li>
+                        <img src="img/shape_join.png">
+                    </ul>
+                    <li>Rename your tracts_race_201519 layer to "t" - you want to do this because when you join the data to another file it automatically inserts the file name in the new column name and it is MUCH easier if the filename is very short.</li>
+                    <li>You can now successfully join the tracts_race_201519 data to the shapefile by the "join" column.</li>
+                    <li>Once you have a successful join, export the shapefile to save the new joined data, name it ga_afford_race.shp.</li>
+                    <li>Create new columns in ga_afford_race using the new demographic data:</li>
+                    <ul> 
+                        <li>pct_bipoc = (total population - white alone)/total population</li>
+                        <li>pct_hisp = hispanic /total population</li>
+                        <li>pct_black = black alone/total population</li>
+                        <li>pct_asian = asian alone/total population</li>
+                    </ul>
+                    <li>Create a choropleth of the each of the new demographic variables as a layer in your map document.</li>
+                    <ul>
+                        <li>You'll want to duplicate your ga_afford_race layer to style it by a differently for each variable, and rename the layer so that you can distinguish between the different styles.</li>
+                        <li>Make sure the color bins for each layer reflect the data - for demographics data, I find that equal interval works well, for instance: 0-20%, 20-40%, 40-60%, 60 - 80%, 80 - 100%</li>
+                        <li>example below</li>
+                        <img src="img/pct_black.png">
+                    </ul>
+                    <li>Create several plotly scatterplots to compare either the affordability ratio or median property value to at least two of your demographic variables. Export one of them by cliking the "Export as image" button on the lower right of the plotly panel.</li>
+                    <li>Create a final map in Print Composer of one city in Georgia that explores demographics and housing affordability using the layers in the processed folder. Style this map carefully, making sure that the colors and bins help tell the story.</li>
+                    <ul>
+                        One example: Create a map of the Black population, High Affordability Areas and Public Housing in Savannah, GA:
+                        <li>Background choropleth layer style by percent Black</li>
+                        <li>Census tracts with Affordability Ratio > 1.05 styled with transparent fill and thick border</li>
+                        <li>Public Housing Locations sized by TOTAL_UNITS (data is in the data/processed folder)</li>
+                    </ul>
+
+                    <li>Upload one of your plotly scatterplots, and your final map to this discussion.  What do the scatterplots tell you about the relationship between the variables you selected?.  What did you learn from this assignment?  What other data would you like to look for to understand affordable housing in Georgia?</li>
                 </ol>
             </section>
 
