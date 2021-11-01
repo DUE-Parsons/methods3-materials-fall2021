@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Class 9 | Methods 3</title>
+        <title>Class 10 | Methods 3</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
@@ -17,7 +17,7 @@
     <body>
 
         <div class="slide">
-            <p>Welcome to Methods 3, Lecture 9</p>
+            <p>Welcome to Methods 3, Lecture 10</p>
             <p>This is a web page that can be viewed as slides.</p>
             <p>→ to move forward</p>
             <p>← to go back</p>
@@ -25,55 +25,6 @@
 
         <div class="slide">
             <h1>Methods 3</h1>
-        </div>
-
-        <div class="slide" style="background-image: url(img/assignment-jason.png);">
-            <span style="background: white; float: right;">Jason</span>
-            <a class="source" href="https://thenewschool.carto.com/u/browj934/builder/31490e75-59e1-4ad2-affe-069b2c5f72a5/embed">source</a>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint" style="font-size: 40px; line-height: 42px;"><code>#layer::labels[zoom &gt; 14] {
-  text-name: [school];
-  text-face-name: 'DejaVu Sans Book';
-  text-size: 18;
-  text-fill: rgba(8, 8, 65, 0.51);
-  text-label-position-tolerance: 0;
-  text-halo-radius: 0;
-  text-halo-fill: #6f808d;
-  text-dy: 0;
-  text-allow-overlap: false;
-  text-placement: point;
-  text-placement-type: dummy;
-  text-opacity: 0;
-}</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/assignment-ashley.png);">
-            <span style="background: white; float: right;">Ashley</span>
-            <a class="source" href="https://thenewschool.carto.com/u/lehra715/builder/40367b24-a3ee-4591-8838-26c5a7ba3c16/embed">source</a>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint" style="font-size: 40px; line-height: 42px;"><code>...
-
-#layer-name[square_footage &lt; 50] {
-  marker-width: 8;
-  marker-fill: #fcb200;
-}
-
-#layer-name[square_footage &gt;= 50] {
-  marker-width: [square_footage]*.01;
-  marker-fill: #cc66cb; 
-}
-
-#layer-name[square_footage &gt;= 6000] {
-  marker-fill: #66C5CC; 
-}
-
-#layer-name[square_footage &gt;= 15000] {
-  marker-width: [square_footage]*.0001; 
-}</code></pre>
         </div>
 
         <div class="slide intermission"></div>
@@ -107,8 +58,347 @@
         </div>
 
         <div class="slide">
-            <h2>next week we'll set aside some time to talk about where you're at</h2>
+            <h2>using SVG icons with Carto</h2>
         </div>
+
+        <div class="slide" style="background-image: url(img/nounproject.png);">
+            <a class="source" href="https://nounproject.com">nounproject.com</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nounproject.png);">
+            <h2>find or make an SVG</h2>
+            <a class="source" href="https://nounproject.com">nounproject.com</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-svg-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-svg-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-svg-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-svg-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-svg-cartocss.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>customizing legends and popups</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-legend-html-example.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-legend-html-example.png);">
+          <h2>for example, to add data sources to legends</h2>
+        </div>
+
+        <div class="slide">
+            <h2>or to customize popup text and layout</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
+            <h2>like last time, we'll need a little code to do this</h2>
+        </div>
+
+        <div class="slide">
+            <h2>HTML</h2>
+        </div>
+
+        <div class="slide">
+            <h2>HTML gives <em>content</em> and <em>structure</em> to web pages</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;
+    &lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;some text on a web page&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
+            <p>
+                the paragraph <strong>opening tag</strong>
+            </p>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
+            <p>
+                the paragraph <strong>opening tag</strong>
+            </p>
+            <p>
+                opening tags always start with
+            </p>
+            <pre class="prettyprint"><code>&lt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
+            <p>
+                the paragraph <strong>opening tag</strong>
+            </p>
+            <p>
+                opening tags always start with
+            </p>
+            <pre class="prettyprint"><code>&lt;</code></pre>
+            <p>and end with</p>
+            <pre class="prettyprint"><code>&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;/p&gt;</code></pre>
+            <p>the paragraph <strong>closing tag</strong></p>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;/p&gt;</code></pre>
+            <p>the paragraph <strong>closing tag</strong></p>
+            <p>closing tags always start with</p>
+            <pre class="prettyprint"><code>&lt;/</code></pre>
+            <p>and end with</p>
+            <pre class="prettyprint"><code>&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;some text on a web page&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>HTML in Carto</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
+        </div>
+
+        <div class="slide">
+            <h2>you can add HTML before and after Carto legends</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
+        </div>
+
+        <div class="slide">
+            <h2>in popups, <code>{{}}</code> around a field name will be replaced by the value of that field for the feature you clicked</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
+            <div style="background-color: rgba(255, 255, 255, 0.8);"><code>{{neighbourhood}}, {{neighbourhood_group}}</code></div>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
+            <div style="background-color: rgba(255, 255, 255, 0.8);">
+                <code>{{neighbourhood}}, {{neighbourhood_group}}</code>
+                <p>becomes</p>
+                <p>SoHo, Manhattan</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>you can use this to add links within Carto maps</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;
+    &lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and in popups those links can change based on the clicked feature</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;
+    &lt;a href="{{url}}"&gt;learn more&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;
+    &lt;a href="{{url}}"&gt;learn more&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            <h2>(if there is a field called <code>url</code>)<h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-html.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can add images with HTML</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;img src="http://i.ytimg.com/cat.jpg" /&gt;</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-popup-image.png);">
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>CSS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>CSS</h2>
+            <p>makes webpages look nice</p>
+        </div>
+
+        <div class="slide">
+            <h2>CSS</h2>
+            <p>deceptively similar to CartoCSS, but not CartoCSS</p>
+        </div>
+
+        <div class="slide">
+            <h2>CSS is similar to CartoCSS but just for webpages</h2>
+        </div>
+
+        <div class="slide">
+            <h2>CartoCSS</h2>
+            <pre class="prettyprint"><code>#layer {
+    line-color: #ae8;
+    line-width: 0.5;
+    polygon-opacity: 1;
+    polygon-fill: #ae8;
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>CSS</h2>
+            <pre class="prettyprint"><code>a {
+    color: blue;
+    font-size: 20px;
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p&gt;
+    some text on a web page
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;p style="font-size: 20px;"&gt;
+    some text on a web page
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/css-properties.png);">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" class="source">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>but you'll probably only use a handful</h2>
+        </div>
+
+        <div class="slide">
+            <h2>font properties</h2>
+            <ul style="list-style: outside disc; padding-left: 50px;">
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-weight</li>
+                <li>text-align</li>
+            </ul>
+                ...
+        </div>
+
+        <div class="slide">
+            <h2>color properties</h2>
+            <ul style="list-style: outside disc; padding-left: 50px;">
+                <li>color</li>
+                <li>background-color</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>box properties</h2>
+            <ul style="list-style: outside disc; padding-left: 50px;">
+                <li>border</li>
+                <li>margin</li>
+                <li>padding</li>
+                <li>width</li>
+                <li>height</li>
+            </ul>
+            ...
+        </div>
+
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;div class="CDB-infowindow"&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;div class="CDB-infowindow" style="color: green;"&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>add <em>style=""</em> in an opening tag</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can add as many properties as you want</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;div
+  class="CDB-infowindow"
+  style="color: green;"
+&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>&lt;div
+  class="CDB-infowindow"
+  style="color: green; font-size: 24px;"
+&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass-css.html" target="_blank">in-class exercise</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>if you want to learn a more about HTML and CSS, there are many free resources</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/codecademy.png);">
+            <a class="source" href="https://www.codecademy.com/learn/learn-html">codecademy</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shayhowe.png);">
+            <a class="source" href="http://learn.shayhowe.com/html-css">learn.shayhowe.com/html-css</a>
+        </div>
+
 
         <div class="slide intermission"></div>
 
@@ -357,283 +647,6 @@
         </div>
 
         <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>using SVG icons with Carto</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/nounproject.png);">
-            <a class="source" href="https://nounproject.com">nounproject.com</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/nounproject.png);">
-            <h2>find or make an SVG</h2>
-            <a class="source" href="https://nounproject.com">nounproject.com</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-0.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-1.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-2.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-3.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-svg-cartocss.png);">
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>customizing legends and popups</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html-example.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html-example.png);">
-          <h2>for example, to add data sources to legends</h2>
-        </div>
-
-        <div class="slide">
-            <h2>or to customize popup text and layout</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
-            <h2>like last time, we'll need a little code to do this</h2>
-        </div>
-
-        <div class="slide">
-            <h2>HTML</h2>
-        </div>
-
-        <div class="slide">
-            <h2>HTML gives <em>content</em> and <em>structure</em> to web pages</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;some text on a web page&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-            <p>
-                the paragraph <strong>opening tag</strong>
-            </p>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-            <p>
-                the paragraph <strong>opening tag</strong>
-            </p>
-            <p>
-                opening tags always start with
-            </p>
-            <pre class="prettyprint"><code>&lt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;</code></pre>
-            <p>
-                the paragraph <strong>opening tag</strong>
-            </p>
-            <p>
-                opening tags always start with
-            </p>
-            <pre class="prettyprint"><code>&lt;</code></pre>
-            <p>and end with</p>
-            <pre class="prettyprint"><code>&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;/p&gt;</code></pre>
-            <p>the paragraph <strong>closing tag</strong></p>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;/p&gt;</code></pre>
-            <p>the paragraph <strong>closing tag</strong></p>
-            <p>closing tags always start with</p>
-            <pre class="prettyprint"><code>&lt;/</code></pre>
-            <p>and end with</p>
-            <pre class="prettyprint"><code>&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;some text on a web page&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>HTML in Carto</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-legend-html.png);">
-        </div>
-
-        <div class="slide">
-            <h2>you can add HTML before and after Carto legends</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-        </div>
-
-        <div class="slide">
-            <h2>in popups, <code>{{}}</code> around a field name will be replaced by the value of that field for the feature you clicked</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-            <div style="background-color: rgba(255, 255, 255, 0.8);"><code>{{neighbourhood}}, {{neighbourhood_group}}</code></div>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-html.png);">
-            <div style="background-color: rgba(255, 255, 255, 0.8);">
-                <code>{{neighbourhood}}, {{neighbourhood_group}}</code>
-                <p>becomes</p>
-                <p>SoHo, Manhattan</p>
-            </div>
-        </div>
-
-        <div class="slide">
-            <h2>you can use this to add links within Carto maps</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="http://data.cityofnewyork.us"&gt;source&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>and in popups those links can change based on the clicked feature</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="{{url}}"&gt;learn more&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    &lt;a href="{{url}}"&gt;learn more&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            <h2>(if there is a field called <code>url</code>)<h2>
-        </div>
-
-        <div class="slide">
-            <h2><a href="inclass-html.html" target="_blank">in-class exercise</a></h2>
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>CSS</h2>
-        </div>
-
-        <div class="slide">
-            <h2>CSS</h2>
-            <p>makes webpages look nice</p>
-        </div>
-
-        <div class="slide">
-            <h2>CSS</h2>
-            <p>deceptively similar to CartoCSS, but not CartoCSS</p>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p&gt;
-    some text on a web page
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;p style="font-size: 20px;"&gt;
-    some text on a web page
-&lt;/p&gt;</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/css-properties.png);">
-            <a class="source" href="http://www.htmldog.com/references/css/properties/">source</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/css-properties.png);">
-            <h2>similar to CartoCSS but just for webpages</h2>
-            <a class="source" href="http://www.htmldog.com/references/css/properties/">source</a>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;div class="CDB-infowindow"&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;div class="CDB-infowindow" style="color: green;"&gt;</code></pre>
-        </div>
-
-        <div class="slide">
-            <h2>add <em>style=""</em> in an opening tag</h2>
-        </div>
-
-        <div class="slide">
-            <h2><a href="inclass-css.html" target="_blank">in-class exercise</a></h2>
-        </div>
-
-        <div class="slide">
-            <h2>you can add images with HTML</h2>
-        </div>
-
-        <div class="slide">
-            <pre class="prettyprint"><code>&lt;img src="http://i.ytimg.com/cat.jpg" /&gt;</code></pre>
-        </div>
-
-        <div class="slide" style="background-image: url(img/carto-popup-image.png);">
-        </div>
-
-        <div class="slide intermission"></div>
-
-        <div class="slide">
-            <h2>if you want to learn a more about HTML and CSS, there are many free resources</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/codecademy.png);">
-            <a class="source" href="https://www.codecademy.com/learn/learn-html">codecademy</a>
-        </div>
-
-        <div class="slide" style="background-image: url(img/shayhowe.png);">
-            <a class="source" href="http://learn.shayhowe.com/html-css">learn.shayhowe.com/html-css</a>
-        </div>
-
-        <div class="slide">
-            <h2>if you take Advanced GIS we'll get into much more depth</h2>
-        </div>
-
-        <div class="slide" style="background-image: url(img/adv-gis.png);">
-            <a class="source" href="https://courses.newschool.edu/courses/NINT5423/">Advanced GIS</a>
-        </div>
 
     </body>
 </html>
