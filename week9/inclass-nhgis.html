@@ -38,7 +38,8 @@
                         <li>In tracts_race_201519: </li>
                         <li>Open the Attribute Table and create a new field -- name it "join"</li>
                         <li>Output field type = "Text (string))"</li>
-                        <li>Expression = concat( "STATEA" , "COUNTYA" , "TRACTA" )</li>
+                        <li>Output field length = 12</li>
+                        <li>Expression = concat( to_int("STATEA" ), to_int("COUNTYA") , to_int("TRACTA") )</li>
                         <li>This combines the 3 fields into one with no spaces in between.</li>
                         <img src="img/csv_join.png">
                         <li>In Afford Ratio (the shapefile of all census tracts in Georgia): </li>
