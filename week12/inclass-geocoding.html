@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>In-class Exercises | Methods 3</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; Methods 3</a>
+                <h1>In-class Exercises</h1>
+            </header>
+
+            <section>
+                <h2>Geocoding Example</h2>
+                <ol>
+                    <li>For this exercise, we'll geocode the stores that got new tobacco licenses in Brooklyn in 2021 - the dataset that we processed in R.  I have purposefully selected a small number of addresses for this exercise.  Geocoding is a laborious process, and it takes a while no matter which service you use.</li>
+                    <li>Open QGIS and install the MMQGIS Plugin</li>
+                    <li>In the new MMQGIS dropdown, select Geocode CSV with Web Service</li>
+                    <li>Open the BK_tobacco_licenses_2021.csv</li> 
+                    <li>Input CSV = BK_tobacco_licenses_2021.csv file that you wrote out from R.</li>
+                    <li>Select Web Service = "US Census Bureau"</li>
+                    <li>Name your Output File Name and Not Found Output List, and save them in your class12/data/processed folder.</li>
+                    <li>Click Apply</li>
+                    <li>Add a baselayer using QuickMap Web Service to see where the geocoded points are</li>
+                    <li>Open the Not Found Output List to see if any stores were not successfully geocoded.</li>
+                    <li>If there were, you can look at the address to see if you can determine the error in the address of the ungeocoded addresses. You may want to correct the Not Found Output addresses and geocode again.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Methods 3</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
